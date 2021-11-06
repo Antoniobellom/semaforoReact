@@ -1,24 +1,24 @@
 import logo from './logo.svg';
 import './App.css';
+import './index.css';
+import { useState } from 'react';
 
-function App() {
+function App(props) {
+  const [selectedColor, setselectedColor] = useState("rojo");
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+
+      <div className="sitck"></div>
+        <div className="semaforo">
+          <div onClick={() => setselectedColor("rojo")} className={"luz rojo" + (selectedColor === "rojo" ? " brillo" : "")} ></div>
+          <div onClick={() => setselectedColor("amarillo")} className={"luz amarillo" + (selectedColor === "amarillo" ? " brillo" : "")}></div>
+          <div onClick={() => setselectedColor("verde")} className={"luz verde" + (selectedColor === "verde" ? " brillo" : "")}></div>
+
+        </div>
+      
+    </>
+
   );
 }
 
