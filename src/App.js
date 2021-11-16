@@ -1,5 +1,4 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
 import './index.css';
 import { useState } from 'react';
 
@@ -14,7 +13,7 @@ function App(props) {
           <div onClick={() => setselectedColor("rojo")} className={"luz rojo" + (selectedColor === "rojo" ? " brillo" : "")} ></div>
           <div onClick={() => setselectedColor("amarillo")} className={"luz amarillo" + (selectedColor === "amarillo" ? " brillo" : "")}></div>
           <div onClick={() => setselectedColor("verde")} className={"luz verde" + (selectedColor === "verde" ? " brillo" : "")}></div>
-
+          
         </div>
       
     </>
